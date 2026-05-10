@@ -1,0 +1,24 @@
+{
+  "name": "musix",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {},
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "error",
+      "version": "8.15.9"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "25.1.0",
+      "onFail": "error"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
