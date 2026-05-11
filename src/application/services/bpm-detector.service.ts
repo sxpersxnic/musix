@@ -1,6 +1,5 @@
 import { createRequire } from "node:module";
-
-import { ANALYSIS_SAMPLE_RATE, decodeAudioFile } from "@/infrastructure/audio/decode-audio-file.js";
+import { decodeAudioFile, ANALYSIS_SAMPLE_RATE } from "../../infrastructure/audio/decode-audio-file.js";
 
 type MusicTempoResult = {
   tempo: number;

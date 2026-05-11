@@ -1,15 +1,15 @@
 import { rename as renameFile } from "node:fs/promises";
 
-import { BpmDetectorService } from "@/application/services/bpm-detector.service.js";
-import { KeyDetectorService } from "@/application/services/key-detector.service.js";
-import { formatDuration } from "@/domain/utils/format.util.js";
-import { buildOutputPath } from "@/domain/utils/path.util.js";
-import { createReferenceFileName } from "@/infrastructure/file-system/create-reference-file-name.js";
-import { extractTrackId } from "@/infrastructure/spotify/extract-track-id.js";
-import { AudioDownloaderService } from "@/infrastructure/downloader/audio-downloader.service.js";
-import { SpotifyService } from "@/infrastructure/spotify/spotify.service.js";
-import { YouTubeSearchService } from "@/infrastructure/youtube/youtube-search.service.js";
 import { Command } from "commander";
+import { formatDuration } from "../../domain/utils/format.util.js";
+import { buildOutputPath } from "../../domain/utils/path.util.js";
+import { AudioDownloaderService } from "../../infrastructure/downloader/audio-downloader.service.js";
+import { createReferenceFileName } from "../../infrastructure/file-system/create-reference-file-name.js";
+import { extractTrackId } from "../../infrastructure/spotify/extract-track-id.js";
+import { SpotifyService } from "../../infrastructure/spotify/spotify.service.js";
+import { YouTubeSearchService } from "../../infrastructure/youtube/youtube-search.service.js";
+import { BpmDetectorService } from "../services/bpm-detector.service.js";
+import { KeyDetectorService } from "../services/key-detector.service.js";
 
 export interface ImportReferenceTrack {
 	artists: Array<{ name: string }>;
