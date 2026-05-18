@@ -1,6 +1,6 @@
 import { Command } from "commander";
 import { referencesInboxPath } from "./config.js";
-import { createDefaultImportReferenceCommandDependencies, createImportReferenceCommand } from "@/application/commands/import-reference.command.js";
+import { createImportReferenceCommand, createDefaultImportReferenceCommandDependencies } from "../../application/commands/import-reference.command.js";
 
 export function createCli(): Command {
   const program = new Command();

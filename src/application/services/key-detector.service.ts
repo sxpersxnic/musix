@@ -1,6 +1,5 @@
-import type { CamelotKey, ClassicalKey, Note } from "@/domain/types/music.types.js";
-
-import { ANALYSIS_SAMPLE_RATE, decodeAudioFile } from "@/infrastructure/audio/decode-audio-file.js";
+import { Note, ClassicalKey, CamelotKey } from "../../domain/types/music.types.js";
+import { decodeAudioFile, ANALYSIS_SAMPLE_RATE } from "../../infrastructure/audio/decode-audio-file.js";
 
 const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"] as const satisfies readonly Note[];
 const MAJOR_PROFILE = [6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88];
